@@ -1,5 +1,9 @@
 <ul>
     <% for( var person of people ) { %>
-        <li><% person.name %></li>
+        <% if(person.name == 'dave') { %>
+        <li> This is definitely <%= person.name %> !!!</li>
+        <% } else {%>
+        <li> Then is <%= person.name %> !!!</li>
+        <% } %>
     <% } %>
 </ul>
